@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Injury Report</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="PDRMA_Form_03_Property_Loss_Report.css">
+    <script src="../public/js/form_03_read_to_object.js"></script>
+</head>
+<body>
+<form id="pdrma-form-03" onsubmit="return formSubmission();">
+
+    <div class="container pdrma-form-03-title">
+        <h1 id="pdrma-form-03-title">PDRMA Form O3</h1>
+    </div>
+    <br>
+    <br>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col">
+                <label for="agency-name">Agency Name</label>
+                <input type="text" class="form-control" id="agency-name" placeholder="Fox Valley Special Recreation Form">
+            </div>
+            <div class="col">
+                <label for="todays-date">Today's date</label>
+                <input type="text" class="form-control" id="todays-date" placeholder="month/day/year">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col">
+                <label for="date-of-incident">Date of Incident</label>
+                <input type="text" class="form-control" id="date-of-incident" placeholder="mm/dd/yyyy">
+            </div>
+            <div class="col">
+                <label for="time-of-incident">Time of Incident</label>
+                <input type="text" class="form-control" id="time-of-incident" placeholder="hh/mm   a.m./p.m.">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col">
+                <label for="name-of-person-completing-report">Name of person completing report</label>
+                <input type="text" class="form-control" id="name-of-person-completing-report">
+            </div>
+            <div class="col">
+                <label for="title-of-person-completing-report">Title of person completing report</label>
+                <input type="text" class="form-control" id="title-of-person-completing-report">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col">
+                <label for="business-phone-number">Business Phone Number</label>
+                <input type="text" class="form-control" id="business-phone-number" placeholder="630.907.1114">
+            </div>
+            <div class="col">
+                <label for="business-email">Business Email</label>
+                <input type="text" class="form-control" id="business-email" placeholder="jasonp@fvsra.org">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="how-did-incident-occur">How did the incident occur and what property was damaged?</label>
+        <textarea name="how-did-incident-occur" class="form-control" id="how-did-incident-occur" cols="30" rows="10"
+                  placeholder="Provide a brief, factual description."></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="name-of-location">Name of the location or nearest intersection where the incident occurred</label>
+        <input type="text" class="form-control" id="name-of-location">
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col">
+                <p>Is there an address for incident location? If yes, please provide the following:</p>
+            </div>
+            <div class="col">
+                <div class="form-check form-check-inline">
+                    <label for="address-available-yes" class="form-check-label">Yes</label>
+                    <input type="radio" name="address-available-radio" class="form-check-input" id="address-available-yes">
+                </div>
+                <div class="form-check form-check-inline">
+                    <label for="address-available-no" class="form-check-label">No</label>
+                    <input type="radio" name="address-available-radio" class="form-check-input" id="address-available-no">
+                </div>
+                <div class="form-check form-check-inline">
+                    <label for="address-available-unknown" class="form-check-label">Unknown</label>
+                    <input type="radio" name="address-available-radio" class="form-check-input" id="address-available-unknown">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="incident-address">Address: </label>
+                    <input type="text" class="form-control" id="incident-address">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="incident-city">city:</label>
+                    <input type="text" class="form-control" id="incident-city">
+                </div>
+                <div class="col">
+                    <label for="incident-state">state:</label>
+                    <input type="text" class="form-control" id="incident-state">
+                </div>
+                <div class="col">
+                    <label for="incident-zip">zip code:</label>
+                    <input type="text" class="form-control" id="incident-zip">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="specific-location">Location (Specify the exact type of location/facility damaged, listing multiple locations/facilities if necessary.)</label>
+            <input type="text" class="form-control" id="specific-location" placeholder="Ex. maintenance garage, sports field, etc">
+        </div>
+
+        <div class="form-group">
+            <label for="primary-location">Primary location (Identify the exact area of damage. Ex. ool storage, batting cage)</label>
+            <input type="text" class="form-control" id="primary-location">
+        </div>
+
+        <div class="form-group">
+            <label for="estimate-of-loss">Estimate of loss</label>
+            <input type="text" class="form-control" id="estimate-of-loss">
+        </div>
+
+        <div class="form-group">
+            <label for="Contact-person-at-facility">Contact person at facility</label>
+            <input type="text" class="form-control" id="Contact-person-at-facility">
+        </div>
+
+        <div class="form-group">
+            <label for="contact-person-email">Contact person's email</label>
+            <input type="text" class="form-control" id="contact-person-email">
+        </div>
+
+        <div class="form-group">
+            <label for="Contact-person-phone-number">Contact person's phone number</label>
+            <input type="text" class="form-control" id="Contact-person-phone-number">
+        </div>
+
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col">
+                    <p>Was damage caused by third-party (non-agency) individual?</p>
+                </div>
+                <div class="form-check form-check-inline col">
+                    <label for="damage-caused-by-third-party-y">yes</label>
+                    <input type="radio" name="3rd-party-cause-radio" class="form-check-input" id="damage-caused-by-third-party-y" >
+                </div>
+                <div class="form-check form-check-inline col">
+                    <label for="damage-caused-by-third-party-n">no</label>
+                    <input type="radio" name="3rd-party-cause-radio" class="form-check-input" id="damage-caused-by-third-party-n" >
+                </div>
+                <div class="form-check form-check-inline col">
+                    <label for="damage-caused-by-third-party-m">unknown</label>
+                    <input type="radio" name="3rd-party-cause-radio" class="form-check-input" id="damage-caused-by-third-party-m" >
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <p>Was the party responsible for damage been identified? If yes, provide the following contact
+                    information for the person or persons identified:</p>
+            </div>
+            <div class="col">
+                <div class="form-check form-check-inline">
+                    <label for="party-damage-identified-yes" class="form-check-label">Yes</label>
+                    <input type="radio" name="party-damage-identified-radio" class="form-check-input" id="party-damage-identified-yes">
+                </div>
+                <div class="form-check form-check-inline">
+                    <label for="party-damage-identified-no" class="form-check-label">No</label>
+                    <input type="radio" name="party-damage-identified-radio" class="form-check-input" id="party-damage-identified-no">
+                </div>
+                <div class="form-check form-check-inline">
+                    <label for="party-damage-identified-unknown" class="form-check-label">Unknown</label>
+                    <input type="radio" name="party-damage-identified-radio" class="form-check-input" id="party-damage-identified-unknown">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="identified-name">Name: </label>
+                    <input type="text" class="form-control" id="identified-name">
+                </div>
+                <div class="col">
+                    <label for="identified-address">Street Address:</label>
+                    <input type="text" class="form-control" id="identified-address">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="identified-city">City:</label>
+                    <input type="text" class="form-control" id="identified-city">
+                </div>
+                <div class="col">
+                    <label for="identified-state">State:</label>
+                    <input type="text" class="form-control" id="identified-state">
+                </div>
+                <div class="col">
+                    <label for="identified-zip">Zip code:</label>
+                    <input type="text" class="form-control" id="identified-zip">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col">
+                    <p>Has a police agency conducted an investigation? </p>
+                </div>
+                <div class="form-check form-check-inline col">
+                    <label for="police-conduct-investigation-y">yes</label>
+                    <input type="radio" name="police-conduct-investigation-radio" class="form-check-input" id="police-conduct-investigation-y" >
+                </div>
+                <div class="form-check form-check-inline col">
+                    <label for="police-conduct-investigation-n">no</label>
+                    <input type="radio" name="police-conduct-investigation-radio" class="form-check-input" id="police-conduct-investigation-n" >
+                </div>
+                <div class="form-check form-check-inline col">
+                    <label for="police-conduct-investigation-m">unknown</label>
+                    <input type="radio" name="police-conduct-investigation-radio" class="form-check-input" id="police-conduct-investigation-m" >
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="what-police-investigated">What police agency investigated the incident?</label>
+            <input type="text" class="form-control" id="what-police-investigated">
+        </div>
+
+        <div class="form-group">
+            <label for="police-report-num">What is the police report number?</label>
+            <input type="text" class="form-control" id="police-report-num">
+        </div>
+
+        <div class="form-group">
+            <label for="charges-against-party">Were criminal charges brought against the responsible party? If yes, what were the charges?</label>
+            <input type="text" class="form-control" id="charges-against-party">
+        </div>
+
+    </div>
+
+    <div class="form-group clear-submit-buttons">
+        <button type="button" class="btn btn-secondary button-spaced">Clear</button>
+        <button type="submit" class="btn btn-primary button-spaced">Submit</button>
+    </div>
+
+
+</form>
+</body>
+</html>
