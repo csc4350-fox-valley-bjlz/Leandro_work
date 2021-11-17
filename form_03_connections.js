@@ -55,7 +55,7 @@ app.post('/updateForm03',function(req,res){
     let formid = req.body.form03id
     console.log(formid)
     con.connect(function(err){
-        let sql = 'SELECT * FROM form_03_forms WHERE Form03ID=' + formid;
+        let sql = 'SELECT * FROM form_03 WHERE Form03ID=' + formid;
         con.query(sql,function(err,result,fields){
             if (err) throw err;
             // result[0].Todays_Date = dateConverter(result[0].Todays_Date);
@@ -73,7 +73,7 @@ app.post('/deleteForm03',function(req,res){
     let formid = req.body.form03idDelete
     console.log(formid)
     con.connect(function(err){
-        let sql = 'DELETE FROM form_03_forms WHERE Form03ID=' + formid;
+        let sql = 'DELETE FROM form_03 WHERE Form03ID=' + formid;
         con.query(sql,function(err,result,fields){
             if (err) throw err;
             console.log(result)
@@ -85,11 +85,11 @@ app.post('/deleteForm03',function(req,res){
 
 // actually update the information for form04
 app.post('/finalUpdateForm03',function(req,res){
-    let form_04 = req.body;
+    let form_03 = req.body;
     let formid = form_03.Form03ID
     // console.log('got body:',form_04)
     con.connect(function(err){
-        let sql = 'UPDATE form_03_forms SET ? WHERE Form03ID=' + formid
+        let sql = 'UPDATE form_03 SET ? WHERE Form03ID=' + formid
         console.log('got body:',form_03)
         console.log(formid)
         con.query(sql,form_03,function(err,result,fields){
@@ -131,7 +131,7 @@ app.get('/ViewForms03',function(req,res){
     // console.log(id)
     // let sql='SELECT * FROM form_03_forms';
     con.connect(function(err){
-        let sql = 'SELECT * FROM form_03_forms';
+        let sql = 'SELECT * FROM form_03';
         con.query(sql,function(err,result,fields){
             if (err) throw err;
             // console.log(result)
